@@ -1,13 +1,20 @@
+/*
+Covid 19 Data Exploration 
+
+Skills used: Joins, CTE's, Temp Tables, Windows Functions, Aggregate Functions, Creating Views, Converting Data Types
+
+*/
+
 SELECT * 
 FROM PortfolioProject..CovidDeaths$
 WHERE continent is not null
 order by 3,4
 
---SELECT * 
---FROM PortfolioProject..CovidVaccinations$
---order by 3,4
+SELECT * 
+FROM PortfolioProject..CovidVaccinations$
+order by 3,4
 
---Lets select the data that we are going to use (DELETE COMMENT)
+--Lets select the data that we are going to use
 
 SELECT Location, date, total_cases, new_cases, total_deaths, population
 FROM PortfolioProject..CovidDeaths$
