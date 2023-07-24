@@ -165,10 +165,10 @@ END
 
 
 
---------------------------------------------------------------------------------
-/*
-Remove Duplicates
-*/
+--------------------------------------------------------------------------------------------------------------------------
+
+--Remove Duplicates
+
 
 WITH RowNumCTE AS (
 SELECT *  ,
@@ -188,6 +188,9 @@ SELECT *
 FROM RowNumCTE
 WHERE row_num >1
 order by PropertyAddress
+
+-------------------------------------------------------------------------------------------------------------------------
+	
 
 -------DELETE DUPLICATE ROW
 
@@ -210,12 +213,10 @@ FROM RowNumCTE
 WHERE row_num >1
 --order by PropertyAddress
 
-----------------------------------------------------------------------------------------------------------
+-------------------------------------------------------------------------------------------------------------------------
 
 
-/*
-DELETE UNUSED COLUMN ****DONOT USE THIS WITH RAW DATA****
-*/
+--DELETE UNUSED COLUMN ****DONOT USE THIS ON RAW DATA****
 
 SELECT *
 FROM PortfolioProject.dbo.NashvilleHousing
